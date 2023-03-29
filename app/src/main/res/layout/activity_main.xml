@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textTicketOut"
         android:layout_width="369dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
@@ -30,7 +30,7 @@
         android:gravity="center"
         android:hint="Здесь будет отражена информация о стоимости взрослых билетов"
         android:textColor="#008ACA"
-        android:textColorHint="#7FB0C6"
+        android:textColorHint="#546E7A"
         android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
@@ -68,7 +68,7 @@
         app:layout_constraintTop_toBottomOf="@+id/railwayTicketChildOut" />
 
     <TextView
-        android:id="@+id/railwayTicketOldOut"
+        android:id="@+id/railwayTicketPensOut"
         android:layout_width="293dp"
         android:layout_height="57dp"
         android:layout_marginTop="20dp"
@@ -82,7 +82,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textTicketChildOut"/>
 
     <TextView
-        android:id="@+id/textTicketOldOut"
+        android:id="@+id/textTicketPensOut"
         android:layout_width="369dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
@@ -90,12 +90,12 @@
         android:gravity="center"
         android:hint="Здесь будет отражена информация о стоимости билетов для пенсионеров"
         android:textColor="#008ACA"
-        android:textColorHint="#7FB0C6"
+        android:textColorHint="#546E7A"
         android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.714"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/railwayTicketOldOut" />
+        app:layout_constraintTop_toBottomOf="@+id/railwayTicketPensOut" />
 
     <TextView
         android:id="@+id/railwayTicketTotalOut"

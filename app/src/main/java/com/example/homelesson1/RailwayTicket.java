@@ -6,34 +6,29 @@ public class RailwayTicket {//задание полей сущности
     private String departureDate;//время отправления
     private String arrivalDate;//время прибытия
     private int distance;//расстояние пути
-    private float ticketPrice;//стоимость взрослых билетов
-    private float ticketpensprice;//стоимость билетов для пенсионеров
+    private float ticketPrice;//стоимость билетов
+    private float ticketDiscount = 0;//скидка
     private int numberOfTickets;//количество билетов
 
-    //создание пустого конструктора
-    public RailwayTicket() {
-
-    }
-
     //создание конструктора исходных данных
-    public RailwayTicket(float ticketPrice , float ticketpensprice , int numberOfTickets ) {
+    public RailwayTicket(float ticketPrice , float ticketDiscount , int numberOfTickets ) {
             this.ticketPrice = ticketPrice;//стоимость взрослых билетов
-            this.ticketpensprice = ticketpensprice;//стоимость билетов для пенсионеров
+            this.ticketDiscount = ticketDiscount;//скидка
             this.numberOfTickets = numberOfTickets;//количество билетов
     }
 
-    public RailwayTicket(float ticketPrice, int numberOfTickets) {
-    }
+    private float ticketPriceWithDiscount() {
+        if (ticketDiscount != 0) {
+         return ticketPrice - (ticketPrice * ticketDiscount/100);
+        } else {
+            return ticketPrice;
+        }
 
+    }
 
     //метод подсчёта стоимости взрослых билетов
     public float ticketPriceAll(){
-        return ticketPrice * numberOfTickets;//нужно количество билетов умножить на стоимость одного билета
-    }
-
-    //метод подсчёта стоимости билетов для пенсионеров
-    public float ticketPriceALL(){
-        return ticketpensprice * numberOfTickets;//нужно количество билетов умножить на стоимость одного билета
+        return ticketPriceWithDiscount() * numberOfTickets;//нужно количество билетов умножить на стоимость одного билета
     }
 
    //создание геттеров и сеттеров
@@ -45,19 +40,18 @@ public class RailwayTicket {//задание полей сущности
         this.ticketPrice = ticketPrice;
     }
 
-    public float getTicketpensprice() {
-        return ticketpensprice;
-    }
-
-    public void setTicketpensprice( ){
-        this.ticketpensprice = ticketpensprice;
-    }
-
     public int getNumberOfTickets() {
         return numberOfTickets;
     }
 
     public void  setNumberOfTickets(){
         this.numberOfTickets = numberOfTickets;
+    }
+    public float getTicketDiscount() {
+        return ticketDiscount;
+    }
+
+    public void  setTicketDiscount(){
+        this.ticketDiscount = ticketDiscount;
     }
 }
