@@ -6,14 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <TextView
-        android:id="@+id/railwayTicketOut"
-        android:layout_width="351dp"
-        android:layout_height="56dp"
+        android:id="@+id/textView"
+        android:layout_width="362dp"
+        android:layout_height="82dp"
         android:layout_marginTop="180dp"
         android:gravity="center"
-        android:text="СТОИМОСТЬ ВЗРОСЛЫХ БИЛЕТОВ"
+        android:text="ВВЕДИТЕ НОМЕР ВАШЕГО БИЛЕТА"
         android:textColor="#008ACA"
         android:textSize="21sp"
         android:textStyle="bold"
@@ -21,109 +20,53 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textTicketOut"
+    <EditText
+        android:id="@+id/ticketNumberIn"
         android:layout_width="369dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
         android:background="#F1EAE2"
+        android:ems="10"
         android:gravity="center"
-        android:hint="Здесь будет отражена информация о стоимости взрослых билетов"
+        android:hint="Номер транспортного билета"
+        android:inputType="textPersonName"
+        android:padding="10dp"
         android:textColor="#008ACA"
-        android:textColorHint="#546E7A"
-        android:textSize="17sp"
+        android:textColorHint="#858585"
+        android:textSize="19sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/railwayTicketOut" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <TextView
-        android:id="@+id/railwayTicketChildOut"
+    <Button
+        android:id="@+id/button"
         android:layout_width="293dp"
         android:layout_height="57dp"
-        android:layout_marginTop="360dp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
-        android:text="СТОИМОСТЬ ДЕТСКИХ БИЛЕТОВ"
+        android:text="ПРОВЕРИТЬ БИЛЕТ"
         android:textColor="#008ACA"
         android:textSize="21sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/ticketNumberIn" />
 
     <TextView
-        android:id="@+id/textTicketChildOut"
+        android:id="@+id/ticketInfoOut"
         android:layout_width="369dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
         android:background="#F1EAE2"
         android:gravity="center"
-        android:hint="Здесь будет отражена информация о стоимости детских билетов"
+        android:hint="Здесь будет отражена информация возможного остатка от покупки"
         android:textColor="#008ACA"
-        android:textColorHint="#546E7A"
+        android:textColorHint="#7FB0C6"
         android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.714"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/railwayTicketChildOut" />
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
-    <TextView
-        android:id="@+id/railwayTicketPensOut"
-        android:layout_width="293dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:text="СТОИМОСТЬ БИЛЕТОВ ДЛЯ ПЕНСИОНЕРОВ"
-        android:textColor="#008ACA"
-        android:textSize="21sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTicketChildOut"/>
-
-    <TextView
-        android:id="@+id/textTicketPensOut"
-        android:layout_width="369dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="20dp"
-        android:background="#F1EAE2"
-        android:gravity="center"
-        android:hint="Здесь будет отражена информация о стоимости билетов для пенсионеров"
-        android:textColor="#008ACA"
-        android:textColorHint="#546E7A"
-        android:textSize="17sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.714"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/railwayTicketPensOut" />
-
-    <TextView
-        android:id="@+id/railwayTicketTotalOut"
-        android:layout_width="293dp"
-        android:layout_height="57dp"
-        android:gravity="center"
-        android:text="СТОИМОСТЬ ВСЕХ БИЛЕТОВ"
-        android:textColor="#008ACA"
-        android:textSize="21sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textTicketTotalOut"
-        android:layout_width="369dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="20dp"
-        android:background="#F1EAE2"
-        android:gravity="center"
-        android:hint="Здесь будет отражена информация о стоимости всех билетов"
-        android:textColor="#008ACA"
-        android:textColorHint="#546E7A"
-        android:textSize="17sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.714"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/railwayTicketTotalOut"
-        />
 </androidx.constraintlayout.widget.ConstraintLayout>
